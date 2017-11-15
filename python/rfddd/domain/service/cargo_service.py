@@ -1,6 +1,8 @@
 # coding=utf-8
+"""the implement of entity"""
 
-from domain.model import delivery
+
+from .delivery import Delivery
 from domain.model import ceargo
 
 class CargoService(object):

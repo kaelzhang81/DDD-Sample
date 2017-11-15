@@ -1,21 +1,31 @@
 # coding=utf-8
-import abc
+"""the implement of repository"""
+
+from abc import ABCMeta, abstractmethod
 
 class Repository(object):
-    metaclass=abc.ABCMeta
+    """Repository abstract class
+    """
+
+
+    metaclass = ABCMeta
 
     @abstractmethod
-    def add(self, , id, obj):
+    def add(self, eid, obj):
+        """add entity"""
         raise NotImplementedError
 
     @abstractmethod
-    def save(self, id, obj):
+    def save(self, eid, obj):
+        """save entity"""
         raise NotImplementedError
 
     @abstractmethod
-    def delete(self, id):
+    def delete(self, eid):
+        """delete entity"""
         raise NotImplementedError
 
     @abstractmethod
-    def find_by_id(self, id):
+    def find_by_id(self, eid):
+        """find entity by id"""
         raise NotImplementedError
