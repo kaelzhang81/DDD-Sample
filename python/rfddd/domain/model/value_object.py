@@ -3,6 +3,7 @@
 
 from inspect import getargspec
 import inspect
+import abc
 
 from .exceptions import NotDeclaredArgsException, ArgWithoutValueException,\
     CannotBeChangeException, ViolatedInvariantException,\
@@ -12,6 +13,7 @@ MIN_NUMBER_ARGS = 1
 
 
 class ValueObject(object):
+    metaclass=abc.ABCMeta
 
     def __new__(cls, *args, **kwargs):
         self = super(ValueObject, cls).__new__(cls)
