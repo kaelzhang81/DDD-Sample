@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import entity
+import delivery
 
 class CargoProvider(object):
     def __init__(self, id, delivery):
@@ -20,3 +21,4 @@ Provider.register(CargoProvider)
 if __name__ == '__main__':
     print 'Subclass:', issubclass(CargoProvider, Provider)
     print 'Instance:', isinstance(CargoProvider, Provider)
+    
