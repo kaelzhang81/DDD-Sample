@@ -6,6 +6,11 @@ class Delivery(object):
     def __init__(self, after_days):
         self._after_days = after_days
 
+    @property
+    def after_days(self):
+        return self._after_days
+
+
 ValueObject.register(Delivery)
 
 if __name__ == '__main__':
