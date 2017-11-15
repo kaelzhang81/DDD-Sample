@@ -15,7 +15,7 @@ class CargoService(object):
         self._cargo_provider.confirm(cargo);
 
     def delay(self, id, days):
-        cargo = self._cargo_repo->FindById(id);
+        cargo = self._cargo_repo.find_by_id(id);
         if cargo is not None:
             cargo.Delay(days);
             self._cargo_repo.save(cargo);
