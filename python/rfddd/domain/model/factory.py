@@ -1,9 +1,10 @@
 # coding=utf-8
 
+import abc
 
-class Factory:
-    def __init__(self):
-        pass
+class Factory(object):
+    metaclass=abc.ABCMeta
 
+    @abstractmethod
     def create(self):
-        pass
+        raise NotImplementedError
