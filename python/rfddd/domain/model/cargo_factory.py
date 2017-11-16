@@ -1,15 +1,16 @@
 # coding=utf-8
 """the implement of factory"""
 
-from abc import ABCMeta, abstractmethod
+import factory
 
-class Factory(object):
-    """Factory abstract class
+class CargoFactory(object):
+    """Cargo factory class
     """
 
-    metaclass = ABCMeta
+    def create(self, cargo_id, days):
+        delivery = Delivery(days);
+        return Cargo(delivery, cargo_id);
 
-    @abstractmethod
-    def create(self):
-        """the create method of factory"""
-        raise NotImplementedError
+if __name__ == '__main__':
+    print 'Subclass:', issubclass(CargoFactory, Factory)
+    print 'Instance:', isinstance(CargoFactory, Factory)
