@@ -2,8 +2,7 @@
 """the implement of entity"""
 
 
-from .delivery import Delivery
-from domain.model import ceargo
+from domain.model import cargo_factory
 
 class CargoService(object):
     """cargo service class
@@ -13,10 +12,9 @@ class CargoService(object):
         self._cargo_repo = cargo_repo
         self._cargo_provider = cargo_provider
 
-    def create(self, id, days):
+    def create(self, cargo_id, days):
         """create cargo"""
-        delivery = Delivery(days);
-        cargo = Cargo(delivery, id);
+        cargo = CargoFactory(cargo_id, days)
         self._cargo_repo.save(cargo);
         self._cargo_provider.confirm(cargo);
 
