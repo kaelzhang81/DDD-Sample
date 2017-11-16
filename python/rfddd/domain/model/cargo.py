@@ -1,5 +1,6 @@
 # coding=utf-8
 """the implement of cargo"""
+
 import entity
 
 class Cargo(object):
