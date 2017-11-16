@@ -2,6 +2,8 @@
 """the implement of factory"""
 
 import factory
+import delivery
+import cargo
 
 class CargoFactory(object):
     """Cargo factory class
